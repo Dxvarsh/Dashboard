@@ -1,20 +1,52 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
 
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
-  --font-poppins: 'Poppins', sans-serif;
-} */
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --color-default: #ffffff; /* or your preferred color */
+  --color-subtle: #666666;
+  --color-muted: #999999;
+  --color-darker: #333333;
+  --color-state-soft: #f0f0f0;
+  --color-state-soft-hover: #e0e0e0;
+  --color-state-soft-press: #d0d0d0;
+  --color-border-default: #e5e7eb;
+  --color-input: #f9fafb;
+  --color-input-disabled: #f3f4f6;
+  --color-placeholder-default: #9ca3af;
+  --color-destructive: #ef4444;
 }
 
-body {
-  background-color: #3d3d3d;
+@layer utilities {
+  .bg-default {
+    background-color: var(--color-default);
+  }
+  .text-subtle {
+    color: var(--color-subtle);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+  .border-darker {
+    border-color: var(--color-darker);
+  }
+  .ring-border-default {
+    --tw-ring-color: var(--color-border-default);
+  }
+  .bg-input {
+    background-color: var(--color-input);
+  }
+  .placeholder-placeholder-default::placeholder {
+    color: var(--color-placeholder-default);
+  }
+  .bg-state-soft {
+    background-color: var(--color-state-soft);
+  }
+  .bg-state-soft-hover:hover {
+    background-color: var(--color-state-soft-hover);
+  }
+  .bg-state-soft-press:active {
+    background-color: var(--color-state-soft-press);
+  }
+  .has-aria-invalid:border-destructive:has([aria-invalid="true"]) {
+    border-color: var(--color-destructive);
+  }
 }
