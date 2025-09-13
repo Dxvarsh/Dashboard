@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from "react";
 
-const Dashboard = () => {
+const Home = ({ navExit, setNavExit }) => {
+  document.title = "Dashboard | Home";
+
+  useEffect(() => {
+    console.log("useEffect");
+  }, []);
+
   return (
-    <div>Dashboard</div>
-  )
-}
+    <>
+      
+    </>
+  );
+};
 
-export default Dashboard
+export default Home;
