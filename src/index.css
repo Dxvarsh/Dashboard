@@ -13,6 +13,40 @@
   --color-input-disabled: #f3f4f6;
   --color-placeholder-default: #9ca3af;
   --color-destructive: #ef4444;
+  --color-primary: #29166f;
+  --color-secondary: #9f1d0c;
+}
+
+@theme {
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+@layer base {
+  /* Set as base font family, e.g. for body */
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.devarsh{
+  background-color: #666666;
 }
 
 @layer utilities {
