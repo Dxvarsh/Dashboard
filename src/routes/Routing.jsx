@@ -10,6 +10,7 @@ import Fees from '../pages/Fees';
 import Attendance from '../pages/Attendance';
 import CertificateManagement from '../pages/CertificateManagement';
 import StaffManagement from '../pages/StaffManagement';
+import RolesAccessControl from '../pages/RolesAccessControl';
 // import Home from '../pages/Home.jsx';
 
 const Routing = () => {
@@ -28,6 +29,7 @@ const Routing = () => {
         <Route path="attendance" element={<Attendance />} />
         <Route path="certificates" element={<CertificateManagement />} />
         <Route path="staff" element={<StaffManagement />} />
+        <Route path="roles" element={<RolesAccessControl />} />
         {/* Add other admin routes here */}
       </Route>
     </Routes>
