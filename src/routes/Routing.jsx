@@ -11,12 +11,12 @@ import Attendance from '../pages/Attendance';
 import CertificateManagement from '../pages/CertificateManagement';
 import StaffManagement from '../pages/StaffManagement';
 import RolesAccessControl from '../pages/RolesAccessControl';
-// import Home from '../pages/Home.jsx';
+import Home from '../pages/Home.jsx';
 
 const Routing = () => {
   return (
     <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
 
       {/* Admin routes wrapped in AdminLayout */}

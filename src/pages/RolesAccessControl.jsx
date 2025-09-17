@@ -23,7 +23,7 @@ const StatsCard = ({ title, value, description, icon, colorClass }) => {
 // Role Card Component
 const RoleCard = ({ role, onConfigure }) => {
   const roleIcons = {
-    'Super Admin': <FaUserShield className="text-[#29166f] mr-1" />,
+    'Super Admin': <FaUserShield className="text-primary mr-1" />,
     'Branch Manager': <FaUserCog className="text-green-600 mr-1" />,
     'Tutor': <FaUserTag className="text-blue-600 mr-1" />,
     'Clerk': <FaKey className="text-purple-600 mr-1" />
@@ -45,7 +45,7 @@ const RoleCard = ({ role, onConfigure }) => {
           <span className="text-sm text-gray-500">{role.users} Users</span>
           <button
             onClick={() => onConfigure(role)}
-            className="text-[#29166f] text-sm font-medium flex items-center"
+            className="text-primary text-sm font-medium flex items-center"
           >
             <FaEdit className="mr-1" /> Configure
           </button>
@@ -58,7 +58,7 @@ const RoleCard = ({ role, onConfigure }) => {
 // Access Log Item Component
 const AccessLogItem = ({ log }) => {
   const actionIcons = {
-    'Admin Login': <FaUserShield className="text-[#29166f] mr-2" />,
+    'Admin Login': <FaUserShield className="text-primary mr-2" />,
     'Student Data Access': <FaUsers className="text-green-600 mr-2" />,
     'Fee Module Access': <FaKey className="text-blue-600 mr-2" />,
     'Schedule Update': <FaClock className="text-purple-600 mr-2" />
@@ -99,7 +99,7 @@ const RoleTableRow = ({ role, onEdit, onDelete }) => {
       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
         <button
           onClick={() => onEdit(role)}
-          className="text-[#29166f] hover:text-[#29166f]/80 mr-3 flex items-center"
+          className="text-primary hover:text-primary/80 mr-3 flex items-center"
         >
           <FaEdit className="mr-1" /> Edit
         </button>
@@ -119,7 +119,7 @@ const ChartCard = ({ title, canvasId }) => {
   return (
     <div className="bg-white rounded-lg border border-neutral-200/30 p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-        <FaChartPie className="mr-2 text-[#29166f]" /> {title}
+        <FaChartPie className="mr-2 text-primary" /> {title}
       </h3>
       <div className="h-80">
         <canvas id={canvasId}></canvas>
@@ -137,7 +137,7 @@ const CreateRoleModal = ({ isOpen, onClose, onSubmit }) => {
       <div className="bg-white rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <FaUserTag className="mr-2 text-[#29166f]" /> Create New Role
+            <FaUserTag className="mr-2 text-primary" /> Create New Role
           </h3>
           <button
             onClick={onClose}
@@ -153,7 +153,7 @@ const CreateRoleModal = ({ isOpen, onClose, onSubmit }) => {
               <label className="block text-sm font-medium text-gray-700 mb-1">Role Name</label>
               <input
                 type="text"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#29166f]"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
             </div>
@@ -162,7 +162,7 @@ const CreateRoleModal = ({ isOpen, onClose, onSubmit }) => {
               <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
               <textarea
                 rows="3"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#29166f]"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Describe the role's purpose and access level"
               ></textarea>
             </div>
@@ -179,7 +179,7 @@ const CreateRoleModal = ({ isOpen, onClose, onSubmit }) => {
                     <input
                       type="checkbox"
                       id={`permission-${index}`}
-                      className="h-4 w-4 text-[#29166f] focus:ring-[#29166f] border-gray-300 rounded"
+                      className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
                     />
                     <label htmlFor={`permission-${index}`} className="ml-2 text-sm text-gray-700">
                       {permission}
@@ -199,7 +199,7 @@ const CreateRoleModal = ({ isOpen, onClose, onSubmit }) => {
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#29166f] text-white rounded-md text-sm font-medium hover:bg-[#29166f]/90 flex items-center"
+                className="px-4 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary/90 flex items-center"
               >
                 <FaUserTag className="mr-1" /> Create Role
               </button>
@@ -227,7 +227,7 @@ const RolesAccessControl = () => {
                 d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
-      colorClass: 'text-[#29166f]'
+      colorClass: 'text-primary'
     },
     {
       id: 2,
@@ -350,11 +350,11 @@ const RolesAccessControl = () => {
     <section className="p-2">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-          <FaUserShield className="mr-2 text-[#29166f]" /> Roles & Access Control
+          <FaUserShield className="mr-2 text-primary" /> Roles & Access Control
         </h2>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-[#29166f] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#29166f]/90 flex items-center"
+          className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 flex items-center"
         >
           <FaPlus className="mr-2" /> Create Role
         </button>
@@ -380,7 +380,7 @@ const RolesAccessControl = () => {
 
         <div className="bg-white rounded-lg border border-neutral-200/30 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <FaListAlt className="mr-2 text-[#29166f]" /> Access Logs
+            <FaListAlt className="mr-2 text-primary" /> Access Logs
           </h3>
           <div className="space-y-3 max-h-80 overflow-y-auto">
             {accessLogs.map((log) => (
@@ -409,10 +409,10 @@ const RolesAccessControl = () => {
               <input
                 type="text"
                 placeholder="Search permissions..."
-                className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:border-[#29166f] focus:outline-none"
+                className="w-full px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:border-primary focus:outline-none"
               />
             </div>
-            <select className="px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:border-[#29166f] focus:outline-none">
+            <select className="px-4 py-2 border border-neutral-300 rounded-lg text-sm focus:border-primary focus:outline-none">
               <option>All Roles</option>
               {roles.map(role => (
                 <option key={role.id}>{role.name}</option>
