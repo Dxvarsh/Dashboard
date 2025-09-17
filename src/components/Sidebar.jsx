@@ -7,15 +7,15 @@ import { IoClose } from 'react-icons/io5';
 
 const Sidebar = ({ toggleSidebar }) => {
     const menuItems = [
-        { id: 'dashboard', label: 'Dashboard', icon: <FiHome />, path: '/admin/dashboard' },
-        { id: 'student-management', label: 'Students', icon: <FiUsers />, path: '/admin/students' },
-        { id: 'course-management', label: 'Courses', icon: <FiBook />, path: '/admin/courses' },
-        { id: 'branch-management', label: 'Branches', icon: <FiGitBranch />, path: '/admin/branches' },
-        { id: 'fees-management', label: 'Fees', icon: <FiDollarSign />, path: '/admin/fees' },
-        { id: 'attendance-timetable', label: 'Attendance', icon: <FiCalendar />, path: '/admin/attendance' },
-        { id: 'certificate-management', label: 'Certificates', icon: <FiAward />, path: '/admin/certificates' },
-        { id: 'employee-tutor-management', label: 'Staff', icon: <FiUser />, path: '/admin/staff' },
-        { id: 'roles-access-control', label: 'Roles', icon: <FiLock />, path: '/admin/roles' },
+        { id: 'dashboard', label: 'Dashboard', icon: <FiHome />, path: 'Dashboard/admin/dashboard' },
+        { id: 'student-management', label: 'Students', icon: <FiUsers />, path: 'Dashboard/admin/students' },
+        { id: 'course-management', label: 'Courses', icon: <FiBook />, path: 'Dashboard/admin/courses' },
+        { id: 'branch-management', label: 'Branches', icon: <FiGitBranch />, path: 'Dashboard/admin/branches' },
+        { id: 'fees-management', label: 'Fees', icon: <FiDollarSign />, path: 'Dashboard/admin/fees' },
+        { id: 'attendance-timetable', label: 'Attendance', icon: <FiCalendar />, path: 'Dashboard/admin/attendance' },
+        { id: 'certificate-management', label: 'Certificates', icon: <FiAward />, path: 'Dashboard/admin/certificates' },
+        { id: 'employee-tutor-management', label: 'Staff', icon: <FiUser />, path: 'Dashboard/admin/staff' },
+        { id: 'roles-access-control', label: 'Roles', icon: <FiLock />, path: 'Dashboard/admin/roles' },
         { id: 'analytics-reports', label: 'Analytics', icon: <FiAward />, path: '/admin/analytics' },
     ];
 
