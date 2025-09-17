@@ -16,11 +16,11 @@ import Home from '../pages/Home.jsx';
 const Routing = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/Dashboard" element={<Home />} />
+      <Route path="Dashboard/login" element={<Login />} />
 
       {/* Admin routes wrapped in AdminLayout */}
-      <Route path="/admin" element={<AdminLayout />}>
+      <Route path="Dashboard/admin" element={<AdminLayout />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="students" element={<Students />} />
         <Route path="courses" element={<Courses />} />
